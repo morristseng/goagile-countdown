@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Countdown } from './Countdown';
+import moment from 'moment';
+import { useMemo } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const getSignoff = (now) => {
+  const weeknum = now.week()
+  const is_odd = weeknum % 2 === 1
+  const signofftime = now.clone().day(is_odd ? 9 : 2).hour(12).minute(0).second(0)
+  if (now > signofftime) {
+    signofftime.add(14, 'days')
+  }
+  return signofftime
 }
 
-export default App;
+export default function App() {
+  const now = useMemo(() => moment(), [])
+  const signoff = useMemo(() => getSignoff(now), [now])
+
+  return (
+    <Countdown remainingTimeInSeconds={signoff.unix() - now.unix()} />
+  );
+}
