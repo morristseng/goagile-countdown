@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/goagile-countdown/static/css/main.fd73b98b.css",
-    "main.js": "/goagile-countdown/static/js/main.db8c03c2.js",
+    "main.js": "/goagile-countdown/static/js/main.d04fb87b.js",
     "static/js/787.72b5c50e.chunk.js": "/goagile-countdown/static/js/787.72b5c50e.chunk.js",
     "index.html": "/goagile-countdown/index.html",
     "main.fd73b98b.css.map": "/goagile-countdown/static/css/main.fd73b98b.css.map",
-    "main.db8c03c2.js.map": "/goagile-countdown/static/js/main.db8c03c2.js.map",
+    "main.d04fb87b.js.map": "/goagile-countdown/static/js/main.d04fb87b.js.map",
     "787.72b5c50e.chunk.js.map": "/goagile-countdown/static/js/787.72b5c50e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fd73b98b.css",
-    "static/js/main.db8c03c2.js"
+    "static/js/main.d04fb87b.js"
   ]
 }
