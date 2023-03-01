@@ -12,28 +12,28 @@ const getNextBiweeklyTime = ({ now, inOddWeek, dayOfWeek, hour, minute = 0, seco
 
 const getSignoff = (now) => getNextBiweeklyTime({
   now,
-  inOddWeek: false,
+  inOddWeek: true,
   dayOfWeek: 2,
   hour: 12,
 })
 
 const getEndOfSprint = (now) => getNextBiweeklyTime({
   now,
-  inOddWeek: false,
+  inOddWeek: true,
   dayOfWeek: 2,
   hour: 18,
 })
 
 const getCodeFreeze = (now) => getNextBiweeklyTime({
   now,
-  inOddWeek: true,
+  inOddWeek: false,
   dayOfWeek: 5,
   hour: 0,
 })
 
 const getRelease = (now) => getNextBiweeklyTime({
   now,
-  inOddWeek: true,
+  inOddWeek: false,
   dayOfWeek: 0,
   hour: 21,
 })
